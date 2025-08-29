@@ -8,11 +8,12 @@ import java.util.List;
 public class ProductListingPage {
     WebDriver driver;
 
-    By productCards = By.cssSelector(".product-card");
-    By productImage = By.cssSelector(".product-card img");
-    By productName  = By.cssSelector(".product-card .name");
-    By productPrice = By.cssSelector(".product-card .price");
-    By saleLabel    = By.cssSelector(".product-card .sale-label");
+    By productCards = By.xpath("//*[@id='main']/div/ul/li");
+
+    By productImage = By.xpath(".//div[1]/a/img");
+    By productName  = By.xpath(".//div[2]/a/h2");
+    By productPrice = By.cssSelector(".//div[2]/span");
+    By saleLabel    = By.cssSelector(".sale-label");
 
     public ProductListingPage(WebDriver driver) {
         this.driver = driver;
